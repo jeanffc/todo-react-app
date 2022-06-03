@@ -1,52 +1,52 @@
 import React, { useState, useEffect } from "react";
-import { v4 as uuid } from "uuid";
+
 import TodoItem from "./TodoItem";
 import NewTodoForm from "./NewTodoForm";
+import { addItem, deleteItem, getList, updateItemComplete, updateItemTask } from "./services/firestore";
 
 import "./TodoList.css";
-import axios from "axios";
 
 function TodoList() {
-  const [todos, setTodos] = useState([
-    { id: uuid(), task: "test 1", completed: false },
-    { id: uuid(), task: "test 2", completed: true }
-  ]);
+  const [todos, setTodos] = useState([]);
 
   useEffect(() => {
     get();
   }, [])
 
   const get = async () => {
-    const response = await axios.get('https://crudcrud.com/Dashboard/8bbc7e551af24a6ca29e44628db36f4e/todos');
-    setTodos(response.data);
+    const data = await getList();
+    setTodos(data);
   }
 
-
-  const create = newTodo => {
-    setTodos([...todos, newTodo]);
+  const create = async (newTodo) => {
+    const todo = await addItem(newTodo.task, newTodo.completed);
+    setTodos([...todos, todo]);
   };
 
-  const remove = id => {
+  const remove = async (id) => {
+    await deleteItem(id);
     setTodos(todos.filter(todo => todo.id !== id));
   };
 
-  const update = (id, updtedTask) => {
+  const update = async (id, updtedTask) => {
     const updatedTodos = todos.map(todo => {
       if (todo.id === id) {
         return { ...todo, task: updtedTask };
       }
       return todo;
     });
+    await updateItemTask(id, updtedTask);
     setTodos(updatedTodos);
   };
 
-  const toggleComplete = id => {
+  const toggleComplete = async (id) => {
     const updatedTodos = todos.map(todo => {
       if (todo.id === id) {
         return { ...todo, completed: !todo.completed };
       }
       return todo;
     });
+    await updateItemComplete(id);
     setTodos(updatedTodos);
   };
 
@@ -63,7 +63,7 @@ function TodoList() {
   return (
     <div className="TodoList">
       <h1>
-        Todo List <span>A simple React Todo List App</span>
+        Todo List <span>Study Project (React + Firebase/Firestore)</span>
       </h1>
       <NewTodoForm createTodo={create} />
       <ul>{todosList}</ul>
