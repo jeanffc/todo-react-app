@@ -2,6 +2,8 @@
 
 This is a study project
 
+Demo: <a href="https://todo-react-app-ecru.vercel.app">https://todo-react-app-ecru.vercel.app</a>
+
 ![My Todo App](/src/assets/imgs/todo-app.png)
 
 ## 📌 Technologies
