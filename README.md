@@ -3,6 +3,7 @@
 This is a study project
 
 Demo: <a href="https://todo-react-app-ecru.vercel.app">https://todo-react-app-ecru.vercel.app</a>
+Trello Invite: <a href="https://trello.com/invite/b/7Sxup0Qd/fd45997fe6300115b7de2468a1fdff9d/todo-app">https://trello.com/invite/b/7Sxup0Qd/fd45997fe6300115b7de2468a1fdff9d/todo-app</a>
 
 ![My Todo App](/src/assets/imgs/todo-app.png)
 
