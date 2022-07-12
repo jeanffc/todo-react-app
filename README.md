@@ -1,16 +1,47 @@
-# Create React App
+# 🎓 My Todo App
 
-This directory is a brief example of a [Create React App](https://github.com/facebook/create-react-app) site that can be deployed to Vercel with zero configuration.
+This is a study project
 
-## Deploy Your Own
+## 📌 Technologies
 
-Deploy your own Create React App project with Vercel.
+This project uses:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/create-react-app&template=create-react-app)
+- HTML
+- CSS
+- Javascript
+- React
+- Firebase
+- Google Auth
 
-_Live Example: https://create-react-template.vercel.app/_
+## 🚀 Install
 
-## Available Scripts
+1. Clone the project
+
+```bash
+git clone https://github.com/jeanffc/todo-react-app.git
+```
+
+2. Open the folder
+
+```bash
+cd todo-react-app
+```
+
+3. Open the project folder on the text editor of your choice (eg Vim, Atom, Sublime, Visual Studio Code)
+
+- For Visual Studio Code
+
+```bash
+code .
+```
+
+4. Install dependecies
+
+```bash
+yarn install
+```
+
+## 💻 Usage
 
 In the project directory, you can run:
 
@@ -29,3 +60,7 @@ Launches the test runner in the interactive watch mode. See the section about [r
 Builds the app for production to the `build` folder.
 
 It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
+
+## 📱 Contact me
+
+<a href="https://www.linkedin.com/in/jeancampos/"> LinkedIn</a>
