@@ -2,6 +2,8 @@
 
 This is a study project
 
+![My Todo App](/src/assets/imgs/todo-app.png)
+
 ## 📌 Technologies
 
 This project uses:
