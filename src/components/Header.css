@@ -1,0 +1,47 @@
+.header {
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.authenticated, .unauthenticated{
+	display: flex;
+	align-items: center;
+
+	width: 500px;
+
+	color: white;
+}
+
+.authenticated {
+	justify-content: space-between;
+}
+
+.unauthenticated {
+	justify-content: center;
+}
+
+.welcome {
+	flex-grow: 1;
+}
+
+.signin span {
+	margin-left: 5px;
+}
+
+.signout {
+	margin-left: 10px;
+}
+
+.avatar {
+	width: 28px;
+	border-radius: 4px;
+	background-color: white;
+}

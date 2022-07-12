@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import './index.css';
-import TodoList from './TodoList';
+import './services/firestore';
+
+import App from './App';
+
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <TodoList />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

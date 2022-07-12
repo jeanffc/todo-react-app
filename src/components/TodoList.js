@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 
+import "./TodoList.css";
+
 import TodoItem from "./TodoItem";
 import NewTodoForm from "./NewTodoForm";
-import { addItem, deleteItem, getList, updateItemComplete, updateItemTask } from "./services/firestore";
+import { addItem, deleteItem, getList, updateItemComplete, updateItemTask } from "../services/firestore";
 
-import "./TodoList.css";
 
 function TodoList() {
   const [todos, setTodos] = useState([]);
@@ -63,7 +64,7 @@ function TodoList() {
   return (
     <div className="TodoList">
       <h1>
-        Todo List <span>Study Project (React + Firebase/Firestore)</span>
+        Todo List <span>Study Project<br />(React + Firebase/Firestore + Sign in with Google)</span>
       </h1>
       <NewTodoForm createTodo={create} />
       <ul>{todosList}</ul>
