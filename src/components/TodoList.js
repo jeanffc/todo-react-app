@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-import "./TodoList.css";
-
 import TodoItem from "./TodoItem";
 import NewTodoForm from "./NewTodoForm";
+
 import { addItem, deleteItem, getList, updateItemComplete, updateItemTask } from "../services/firestore";
 
+import "./TodoList.css";
 
 function TodoList() {
   const [todos, setTodos] = useState([]);

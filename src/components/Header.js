@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+
+import useUser from '../hooks/useUser';
+import { auth, signInWithGoogle } from '../services/auth';
 
 import './Header.css';
 
-import { auth, signInWithGoogle } from '../services/auth';
-
 const Header = () => {
-	const [user, setUser] = useState(null);
-
-	useEffect(() => {
-		auth.onAuthStateChanged(user => {
-			setUser(user);
-		})
-	}, [])
+	const user = useUser();
 
 	return (
 		<header className='header'>

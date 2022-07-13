@@ -8,6 +8,7 @@
 }
 
 .Todo-task {
+  cursor: pointer;
   position: relative;
   transition: opacity 0.4s linear;
 }

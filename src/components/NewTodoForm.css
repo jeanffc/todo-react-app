@@ -35,6 +35,10 @@
   background: #ff5e5e;
 }
 
+.NewTodoForm button:disabled {
+  opacity: 0.5;
+}
+
 .NewTodoForm input,
 .NewTodoForm button {
   font-family: "Quicksand", sans-serif;

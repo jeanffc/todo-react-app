@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 
+import useUser from "../hooks/useUser";
+
 import "./TodoItem.css";
 
 function TodoItem({ todo, remove, update, toggleComplete }) {
+  const user = useUser();
   const [isEditing, setIsEditing] = useState(false);
   const [task, setTask] = useState(todo.task);
 
@@ -44,14 +47,18 @@ function TodoItem({ todo, remove, update, toggleComplete }) {
         >
           {todo.task}
         </li>
-        <div className="Todo-buttons">
-          <button onClick={toggleFrom}>
-            <i className="fas fa-pen" />
-          </button>
-          <button onClick={handleClick}>
-            <i id={todo.id} className="fas fa-trash" />
-          </button>
-        </div>
+        {user && (
+          <div className="Todo-buttons">
+            <button onClick={toggleFrom}>
+              <i className="fas fa-pen" />
+            </button>
+            <button onClick={handleClick}>
+              <i id={todo.id} className="fas fa-trash" />
+            </button>
+          </div>
+        )
+        }
+
       </div>
     );
   }
